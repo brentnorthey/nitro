@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<title>twitter</title>
+	</head>
+	<body data-ng-app="twitterApp">
+
+		<h2>Welcome, plesae enter your screen name to view recent tweets.</h2>
+
+		<div class="input-container">
+			<div class="container">
+
+				<div class="item">
+					<div ui-view="twitter-view"> Hola </div>
+				</div>
+
+			</div>
+        </div>
+
+			<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+			<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+			<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+			<script src="assets/libs/angular-linkify-min.js"></script>
+			<script src="assets/libs/linkify-html.js"></script>
+			<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+			<script type="text/javascript" src="assets/libs/moment/moment.2.10.6/moment.js"></script>
+
+            <script src="app/app.module.js"></script>
+			<script src="app/app.routes.js"></script>
+
+			<script src="app/components/twitter/twitter.controller.js"></script>
+			<script src="app/components/twitter/twitter.service.js"></script>
+
+            <!--<script src="app/components/items/items.controller.js"></script>-->
+			<!--<script src="app/components/items/item.controller.js"></script>-->
+			<!--<script src="app/components/items/items.service.js"></script>-->
+
+	</body>
+</html>

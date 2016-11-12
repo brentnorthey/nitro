@@ -1,0 +1,9 @@
+<div ng-controller="items">
+    <div data-ng-repeat="item in itemList.items">
+        <p class="list-title">{{ item.title }}</p>
+        <img ng-src="{{ item.image.src }}" class="list-image"></img>
+        <p class="list-description">{{ item.body_html }}</p>
+        <a ui-sref="items.detail({id:$index})">details</a>
+        <div class="add-btn" ng-click="addItem()" ng-model="itemModel">Add</div>
+    </div>
+</div>

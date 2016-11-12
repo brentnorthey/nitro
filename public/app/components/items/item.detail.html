@@ -1,0 +1,15 @@
+<div ng-controller="item">
+    <div class="product-detail>
+        <p class="list-title">{{ productDetail.title }}</p>
+        <img ng-src="{{ productDetail.image.src }}" class="list-image"></img>
+        <p class="list-description">{{ productDetail.body_html}}</p>
+
+        <div class="stock">Stock: {{inventory}}</div>
+        <div class="options" ng-repeat="option in options">
+            {{option.name}}:
+            <span ng-repeat="value in option.values"> {{value}} </span>
+        </div>
+        <div class="price">Price: {{price}}</div>
+        <div class="delete-btn" ng-click="deleteProduct()" ng-model="productModel.id">Delete</div>
+    </div>
+</div>

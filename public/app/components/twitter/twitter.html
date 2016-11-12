@@ -1,0 +1,21 @@
+<div ng-controller="twitter">
+    <div class="input-container">
+        <input type="text" class="screen-name" data-ng-enter="getRecentTweets()" data-ng-model="screenName" placeholder="Enter twitter screen name"/>
+        <a class="btn-list" data-ng-click="getRecentTweets()" >Display Tweets</a>
+    </div>
+
+    <div class="tweet-list">
+        <div data-ng-repeat="tweet in recentTweets">
+            <!--<p class="list-title">{{ product.title }}</p>-->
+            <!--<img ng-src="{{ product.image.src }}" class="list-image"></img>-->
+            <div class="list-description">
+                <div ng-bind="tweet.text" linkify></div>
+                <div ng-bind-html="tweet.source | renderHTML"></div>
+                {{tweet.created_at }}
+            </div>
+            <!--<a ng-click="getProductDetail($index)">details</a>-->
+            <!--<a ui-sref="products.detail({id:$index})">details</a>-->
+            <!--<div class="add-btn" ng-click="addProduct()" ng-model="productModel">Add</div>-->
+        </div>
+    </div>
+</div>
