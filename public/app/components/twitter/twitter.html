@@ -9,7 +9,7 @@
             <!--<p class="list-title">{{ product.title }}</p>-->
             <!--<img ng-src="{{ product.image.src }}" class="list-image"></img>-->
             <div class="list-description">
-                <div ng-bind="tweet.text" linkify></div>
+                <div ng-bind="tweet.text"></div>
                 <div ng-bind-html="tweet.source | renderHTML"></div>
                 {{tweet.created_at }}
             </div>
